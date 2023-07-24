@@ -1,0 +1,253 @@
+{
+	"info": {
+		"_postman_id": "2cf23d41-4b8d-4e8c-a0a7-03f9636cda97",
+		"name": "Seguros",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Garantia",
+			"item": [
+				{
+					"name": "Todas Garantias",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Garantia por id",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Inserir Garantia",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Calculadora\",\r\n    \"valor\": 75.50,\r\n    \"estoqueMinimo\": 14,\r\n    \"estoqueMaximo\": 21,\r\n    \"saldoEstoque\": 0,\r\n    \"fornecedor\": \"Casio\",\r\n    \"garantia\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/produtos",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"produtos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar Garantia",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Calculadora Cientifica\",\r\n    \"valor\": 75.50,\r\n    \"estoqueMinimo\": 14,\r\n    \"estoqueMaximo\": 21,\r\n    \"saldoEstoque\": 0,\r\n    \"fornecedor\": \"Casio\",\r\n    \"garantia\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/produtos/5",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"produtos",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar Garantia",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Calculadora Cientifica\",\r\n    \"valor\": 75.50,\r\n    \"estoqueMinimo\": 14,\r\n    \"estoqueMaximo\": 21,\r\n    \"saldoEstoque\": 0,\r\n    \"fornecedor\": \"Casio\",\r\n    \"garantia\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/produtos/7",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"produtos",
+								"7"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Vendas",
+			"item": [
+				{
+					"name": "Todas Vendas",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Inserir Venda",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar Venda",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Produto",
+			"item": [
+				{
+					"name": "Todos produtos",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Produto por Id",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Inserir Produto",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Calculadora\",\r\n    \"valor\": 75.50,\r\n    \"estoqueMinimo\": 14,\r\n    \"estoqueMaximo\": 21,\r\n    \"saldoEstoque\": 0,\r\n    \"fornecedor\": \"Casio\",\r\n    \"garantia\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/produtos",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"produtos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar Produto",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Calculadora Cientifica\",\r\n    \"valor\": 75.50,\r\n    \"estoqueMinimo\": 14,\r\n    \"estoqueMaximo\": 21,\r\n    \"saldoEstoque\": 0,\r\n    \"fornecedor\": \"Casio\",\r\n    \"garantia\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/produtos/5",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"produtos",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar Produto",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Calculadora Cientifica\",\r\n    \"valor\": 75.50,\r\n    \"estoqueMinimo\": 14,\r\n    \"estoqueMaximo\": 21,\r\n    \"saldoEstoque\": 0,\r\n    \"fornecedor\": \"Casio\",\r\n    \"garantia\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/produtos/7",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"produtos",
+								"7"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "New Folder",
+			"item": [
+				{
+					"name": "Todas Vendas Copy 2",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

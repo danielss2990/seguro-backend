@@ -27,18 +27,6 @@ public class VendaController {
 		return ResponseEntity.ok().body(result);
 	}
 
-	/*
-	@GetMapping
-	public ResponseEntity<List<VendaDTO>> findAll() {
-		List<VendaDTO> result = vendaService.findAll();
-		return ResponseEntity.ok(result);
-	}*/
-
-	/*@GetMapping(value = "/games")
-	public List<VendaProjecaoDTO> findGames() {
-		List<VendaProjecaoDTO> result = vendaService.findByGameList();
-		return result;
-	}*/
 
 	@GetMapping
 	public Map<Long, List<VendaProjecaoDTO>> findGames() {
@@ -46,23 +34,9 @@ public class VendaController {
 		return result;
 	}
 
-	/*
-	@GetMapping(value = "/inserir")
-	public VendaIDProjection inserirVenda() {
-		VendaIDProjection result = vendaService.insertVendaID();
-		return result;
-	}*/
-
-	/*@GetMapping(value = "/belong")
-	public void inserirBelongVenda(@RequestBody InsertVendaDTO dto) {
-		//vendaService.insertBelongVenda(dto);
-	}*/
 
 	@PostMapping(value = "/inserir")
 	public ResponseEntity<VendaProjecaoCadastroDTO> inserirBelongVenda(@RequestBody ListInsertVendaDTO dto) {
-		//vendaService.insertBelongVenda(dto);
-
-
 
 		List<InsertVendaDTO> itens = dto.getListaItens();
 
@@ -104,27 +78,4 @@ public class VendaController {
 		vendaService.deleteBelongVenda(id);
 	}
 
-	/*
-	@PostMapping
-	public ResponseEntity<VendaDTO> insert(@Valid @RequestBody VendaDTO dto){
-		dto = vendaService.insert(dto);
-		URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(dto.getId()).toUri();
-		return ResponseEntity.created(uri).body(dto);
-
-	}
-
-	@PutMapping(value = "/{id}")
-	public ResponseEntity<VendaDTO> update(@PathVariable Long id , @RequestBody VendaDTO dto){
-		dto = vendaService.update(id,dto);
-		return ResponseEntity.ok().body(dto);
-
-	}
-
-	@DeleteMapping(value = "/{id}")
-	public ResponseEntity<VendaDTO> delete(@PathVariable Long id){
-		vendaService.delete(id);
-		return ResponseEntity.noContent().build();
-
-	}
-*/
 }
