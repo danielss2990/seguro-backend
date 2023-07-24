@@ -21,6 +21,9 @@ public class VendaController {
 	@Autowired
 	private VendaService vendaService;
 
+	@Autowired
+	private ProdutoService produtoService;
+
 	@GetMapping(value = "/{id}")
 	public ResponseEntity<VendaDTO> findById(@PathVariable Long id) {
 		VendaDTO result = vendaService.findById(id);
@@ -55,6 +58,10 @@ public class VendaController {
 			System.out.println(item.getProdutoID());
 			System.out.println(item.getQuantidade());
 			System.out.println("*******************");
+
+
+			//verifica se o produto existe mno banco
+			ProdutoDTO produto = produtoService.findById(item.getProdutoID());
 
 			vendaService.insertBelongVenda(item);
 			vendaService.insertProdutoVenda(item);
